@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+/* Variables */
+
+:root {
+  --color1: #1B1B1B;
+  --color2: #f5d5e0;
+  --color3: #7f167f;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background-color: var(--color1);
+  color: var(--color2);
+  font-family: "Dosis", sans-serif;
+  font-size: 1.1rem;
+  overflow-x: hidden;
+}
+
+h3 {
+  color: var(--color3);
+  font-size: 2.2rem;
+  letter-spacing: 0.15rem;
+  font-style: italic;
+  text-transform: uppercase
+}
+
+/* Nebula Page */
+
+#nebula-box {
+  font-family: 'Orbitron', sans-serif;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 70%;
+  color: black;
+}
+
+#nebula-box h1 {
+  font-size: 5rem;
+  color: black;
+  font-style: italic;
+  text-shadow: 0 0 0.5rem #eee239
+}
+
+#nebula-box button {
+  font-family: inherit;
+  border: 0.3rem solid black;
+  box-shadow: 0 0 0.5rem #eee239;
+  width: 60%;
+  border-radius: 1rem;
+  padding: 1rem;
+  font-size: 2rem;
+  background: none;
+}
+
+#nebula-box button:hover {
+  box-shadow: 0 0 0.5rem #ffffff;
+  cursor: pointer;
+}
+
+#nebula-box button a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* About Section */
+
+.container {
+  max-width: 90%;
+  margin: auto;
+}
+
+.about-box {
+  height: 70vh;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 2rem;
+  align-items: center;
+  margin-bottom: 5%;
+}
+
+.about-box img {
+  width: 80%;
+}
+
+#about-text1 {
+  margin-top: 8%;
+  display: inline;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.about-btn {
+  padding: .5rem;
+  border-radius: 1rem;
+  width: 15rem;
+  margin-top: 8%;
+  background-color: var(--color1);
+  color: var(--color2);
+  font-size: 1.5rem;
+  transition: all 0.5s ease;
+}
+
+.about-btn:hover {
+  background-color: var(--color2);
+  color: var(--color1);
+  letter-spacing: 0.2rem;
+}
+
+/* Tools and Skills Section */
+
+.skills-line {
+  width: 50%;
+  margin-left: 0;
+}
+
+.icons {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3rem;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.icons img {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+/* Featured Work Section */
+
+.project-line{
+  width: 50%;
+  margin-left: auto;
+}
+
+.project-head {
+  text-align: center;
+  margin-top: 15%;
+}
