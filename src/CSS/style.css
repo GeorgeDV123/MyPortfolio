@@ -240,3 +240,57 @@ h3 {
   letter-spacing: 0.2rem;
   box-shadow: 0 0 2rem var(--color3);
 }
+
+/* Footer */
+.gradient1 {
+  width: 100vw;
+  height: 20vh;
+  background: linear-gradient(#1b1b1b, black);
+}
+
+#bg2 {
+
+}
+
+.contact-box {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50vw;
+  height: 50vh;
+  text-align: center;
+  padding: 1rem;
+  background-color: rgba(27, 27, 27, 0.8);
+}
+
+.contact-box div {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+.contact-box div img {
+  width: 2rem;
+  height: 2rem;
+ margin-right: 1rem;
+ background-color: var(--color2);
+ padding: 0.3rem;
+ border-radius: 10%
+}
+
+.contact-box h4 {
+  margin: 0;
+}
+
+.working {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 1rem;
+}
+
+.footer {
+  position: relative;
+}
+
