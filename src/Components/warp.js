@@ -1,6 +1,6 @@
 import * as THREE from "three";
 
-export function Stars() {
+export function Warp() {
   //Declare three.js variables
   var camera,
     scene,
@@ -15,36 +15,37 @@ export function Stars() {
     1000
   );
 
-  camera.position.setZ(50);
+  camera.position.setZ(45);
 
   //init scene
   scene = new THREE.Scene();
 
   //init renderer
   renderer = new THREE.WebGLRenderer({
-    canvas: document.querySelector("#bg2"),
+    canvas: document.querySelector("#bg3"),
   });
   renderer.setPixelRatio(window.devicePixelRatio);
-  renderer.setSize(window.innerWidth, window.innerHeight );
+  renderer.setSize(window.innerWidth, 0.5 * window.innerHeight);
 
   function addSphere() {
-    // create sphere 1000 times
-    for (var i = 1; i < 1000; i += 1) {
-      var geometry = new THREE.SphereGeometry(0.3, 32, 32);
+    // The loop will move from z position of -1000 to z position 1000, adding a random particle at each position.
+    for (var i = 1; i < 500; i += 1) {
+      // Make a sphere (exactly the same as before).
+      var geometry = new THREE.SphereGeometry(0.6, 32, 32);
       var material = new THREE.MeshBasicMaterial({ color: 0xffffff });
       var sphere = new THREE.Mesh(geometry, material);
 
-      // position the spheres in random locations 
+      // This time we give the sphere random x and y positions between -500 and 500
       const [x, y, z] = Array(3)
         .fill()
-        .map(() => THREE.MathUtils.randFloatSpread(600));
+        .map(() => THREE.MathUtils.randFloatSpread(1000));
 
       sphere.position.set(x, y, z);
 
       //add the sphere to the scene
       scene.add(sphere);
 
-      //push each sphere to the stars array
+      //finally push it to the stars array
       stars.push(sphere);
     }
   }
@@ -54,15 +55,17 @@ export function Stars() {
     for (var i = 0; i < stars.length; i++) {
       let star = stars[i];
 
-      // make starts slowly move down the screen
-      star.position.y += 0.1;
+      // and move it forward dependent on the mouseY position.
+      star.position.z += 2.2;
 
-      // reposition the star once it has moved enough
-      if (star.position.y > 300) star.position.y -= 600;
+      // if the particle is too close move it to the back
+      if (star.position.z > 300) star.position.z -= 600;
     }
   }
 
   function render() {
+    //get the frame
+
     requestAnimationFrame(render);
 
     //render the scene
@@ -71,11 +74,12 @@ export function Stars() {
   }
 
   const pointLight = new THREE.PointLight(0xffffff);
-  pointLight.position.set(1, 1, -10);
+  pointLight.position.set(1, 1, 50);
 
   const ambientLight = new THREE.AmbientLight(0xffffff);
   scene.add(pointLight, ambientLight);
 
   addSphere();
   render();
+
 }

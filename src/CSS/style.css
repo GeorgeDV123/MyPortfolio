@@ -71,6 +71,45 @@ h3 {
   color: inherit;
 }
 
+/* Header + Navbar Section */
+header {
+  position: relative;
+}
+
+.gradient2 {
+  width: 100vw;
+  height: 20vh;
+  background: linear-gradient(black, #1b1b1b);
+}
+
+#bg3 {
+  display: block;
+}
+
+header h1 {
+  font-family: "Orbitron", sans-serif;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  letter-spacing: 0.35rem;
+  font-style: italic;
+  text-shadow: 0 0 1rem var(--color4);
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: 1rem;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: black;
+}
+
 /* About Section */
 
 .container {
@@ -246,10 +285,6 @@ h3 {
   width: 100vw;
   height: 20vh;
   background: linear-gradient(#1b1b1b, black);
-}
-
-#bg2 {
-
 }
 
 .contact-box {
