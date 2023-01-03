@@ -18,9 +18,9 @@
 
      .ufo1-move {animation:ufo1-move 3s infinite;}
      @keyframes ufo1-move {
-         0%{transform: translate3d(0, 2px, 0);}
-         50%{transform: translate3d(0, -10px, 0);}
-         100%{transform: translate3d(0, 2px, 0);}
+         0%{transform: translate3d(0, 1.5rem, 0);}
+         50%{transform: translate3d(0, -0.5rem, 0);}
+         100%{transform: translate3d(0, 1.5rem, 0);}
      }
      @media (prefers-reduced-motion: reduce) {
          .ufo1-move {

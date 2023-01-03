@@ -1,12 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Dosis&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
 
 /* Variables */
 
 :root {
-  --color1: #1B1B1B;
+  --color1: #1b1b1b;
   --color2: #f5d5e0;
   --color3: #7f167f;
+  --color4: #eee239;
 }
 
 html,
@@ -25,13 +26,13 @@ h3 {
   font-size: 2.2rem;
   letter-spacing: 0.15rem;
   font-style: italic;
-  text-transform: uppercase
+  text-transform: uppercase;
 }
 
 /* Nebula Page */
 
 #nebula-box {
-  font-family: 'Orbitron', sans-serif;
+  font-family: "Orbitron", sans-serif;
   margin: 0;
   position: absolute;
   top: 50%;
@@ -46,13 +47,13 @@ h3 {
   font-size: 5rem;
   color: black;
   font-style: italic;
-  text-shadow: 0 0 0.5rem #eee239
+  text-shadow: 0 0 0.5rem var(--color4);
 }
 
 #nebula-box button {
   font-family: inherit;
   border: 0.3rem solid black;
-  box-shadow: 0 0 0.5rem #eee239;
+  box-shadow: 0 0 0.5rem var(--color4);
   width: 60%;
   border-radius: 1rem;
   padding: 1rem;
@@ -99,9 +100,9 @@ h3 {
 }
 
 .about-btn {
-  padding: .5rem;
+  padding: 0.8rem;
   border-radius: 1rem;
-  width: 15rem;
+  width: 14rem;
   margin-top: 8%;
   background-color: var(--color1);
   color: var(--color2);
@@ -137,14 +138,105 @@ h3 {
   height: 3.5rem;
 }
 
+.icons div {
+  transition: all 0.5s ease;
+}
+
+.icons div:hover {
+  transform: scale(1.2);
+  text-shadow: 0 0 0.5rem var(--color4);
+}
+
+.icons div:active {
+  transform: scale(1);
+}
+
+/* UFO img */
+.ufo {
+  width: 10rem;
+  position: relative;
+  left: 10%;
+  animation: move 10s linear infinite;
+}
+
+@keyframes move {
+  0% {
+    left: 20%;
+  }
+  50% {
+    left: 70%;
+  }
+  100% {
+    left: 20%;
+  }
+}
+
 /* Featured Work Section */
 
-.project-line{
+.project-line {
   width: 50%;
   margin-left: auto;
 }
 
 .project-head {
   text-align: center;
-  margin-top: 15%;
+  margin-top: 5%;
+}
+
+.project-main {
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  grid-template-rows: repeat(3, auto);
+  justify-content: space-evenly;
+  gap: 3rem;
+  row-gap: 2rem;
+  align-items: center;
+  text-align: center;
+}
+
+.project-img {
+  display: flex;
+  justify-self: center;
+  width: 80%;
+  border-radius: 1rem;
+  object-fit: cover;
+  height: 70vh;
+}
+
+.project-sub-head {
+  font-size: 1.5rem;
+  text-shadow: 0 0 0.5rem var(--color4);
+  letter-spacing: 0.3rem;
+  margin: 0;
+  margin-bottom: 3%;
+}
+
+.sm-icon img {
+  width: 2rem;
+  height: 2rem;
+}
+
+.sm-icon {
+  display: flex;
+  justify-content: space-evenly;
+  border-bottom: 0.2rem solid black;
+  border-top: 0.2rem solid black;
+  padding: 0.5rem;
+}
+
+.project-btn {
+  padding: 0.5rem;
+  margin: 3%;
+  width: 10rem;
+  background-color: var(--color1);
+  color: var(--color2);
+  font-size: 1.3rem;
+  transition: all 0.5s ease;
+}
+
+.project-btn:hover {
+  background-color: var(--color2);
+  color: var(--color1);
+  letter-spacing: 0.2rem;
+  box-shadow: 0 0 2rem var(--color3);
 }
