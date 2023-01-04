@@ -5,16 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/src/CSS/style.css" />
+    <link rel="icon" href="/imgs/logo5.svg" type="image/x-icon">
     <title>George de Vries</title>
   </head>
   <body>
     <!-- Navbar -->
     <nav class="navbar">
-      <div>
-        <a>About</a>
-        <a>Tools & Skills</a>
-        <a>Featured Projects</a>
-        <a>Contact</a>
+      <div class="nav-btns">
+        <p>Click me →</p>
+        <img id="sm" src="/icons/icon_mobile.svg">
+        <img id="med" src="/icons/icon_laptop.svg">
+        <img id="lg" src="/icons/icon_desktop.svg">
+      </div>
+      <h2>George de Vries</h2>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Tools & Skills</a>
+        <a href="#projects">Featured Projects</a>
+        <a href="#contact">Contact</a>
       </div>
     </nav>
 
@@ -27,7 +35,7 @@
 
     <main class="container">
       <!-- About section -->
-      <section class="about-box">
+      <section class="about-box" id="about">
         <img src="/imgs/planet-1.svg" alt="planets" />
         <div>
           <h3>
@@ -48,7 +56,7 @@
       </section>
 
       <!-- Tools and Skills -->
-      <section>
+      <section id="skills">
         <h3 style="margin-left: 3.9rem">
           Tools & Skills
           <hr class="skills-line" />
@@ -118,7 +126,7 @@
       </div>
 
       <!-- Projects -->
-      <section>
+      <section id="projects">
         <h3 class="project-head">
           Featured Projects
           <hr class="project-line" />
@@ -171,7 +179,7 @@
     </main>
 
     <!-- Footer + Contact -->
-    <footer class="footer">
+    <footer class="footer" id="contact">
       <div class="gradient1"><!-- Gradient --></div>
       <canvas id="bg2"></canvas>
       <section class="contact-box">

@@ -19,6 +19,8 @@ body {
   font-family: "Dosis", sans-serif;
   font-size: 1.1rem;
   overflow-x: hidden;
+  transition: all 1s ease;
+  scroll-behavior: smooth;
 }
 
 h3 {
@@ -27,6 +29,10 @@ h3 {
   letter-spacing: 0.15rem;
   font-style: italic;
   text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
 }
 
 /* Nebula Page */
@@ -102,12 +108,47 @@ header h1 {
   position: sticky;
   top: 0;
   z-index: 1;
-  padding: 1rem;
-  width: 100vw;
-  display: flex;
-  align-items: center;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
   justify-content: center;
+  align-items: baseline;
+  text-align: center;
   background: black;
+  font-size: 80%;
+}
+
+.nav-btns,
+.nav-links {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.nav-btns {
+  align-items: center;
+}
+
+.nav-btns img {
+  padding: 0.5rem;
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--color2);
+}
+
+.nav-btns img:hover {
+  cursor: pointer;
+  background-color: var(--color3);
+}
+
+.nav-links a:link, .nav-links a:visited {
+  text-decoration: none;
+  color: var(--color2);
+}
+
+.nav-links a:hover {
+  text-decoration: underline solid 20% var(--color3);
+  cursor: pointer;
 }
 
 /* About Section */
@@ -308,10 +349,10 @@ header h1 {
 .contact-box div img {
   width: 2rem;
   height: 2rem;
- margin-right: 1rem;
- background-color: var(--color2);
- padding: 0.3rem;
- border-radius: 10%
+  margin-right: 1rem;
+  background-color: var(--color2);
+  padding: 0.3rem;
+  border-radius: 10%;
 }
 
 .contact-box h4 {
@@ -328,4 +369,3 @@ header h1 {
 .footer {
   position: relative;
 }
-
