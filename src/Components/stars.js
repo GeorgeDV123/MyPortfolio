@@ -76,6 +76,13 @@ export function Stars() {
   const ambientLight = new THREE.AmbientLight(0xffffff);
   scene.add(pointLight, ambientLight);
 
+  function onWindowResize() {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+  }
+  window.addEventListener("resize", onWindowResize, false);
+
   addSphere();
   render();
 }
