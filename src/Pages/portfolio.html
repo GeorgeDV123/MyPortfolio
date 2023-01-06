@@ -5,7 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/src/CSS/style.css" />
-    <link rel="icon" href="/imgs/logo5.svg" type="image/x-icon">
+    <link rel="stylesheet" href="/src/CSS/media.css" />
+    <link rel="stylesheet" href="/src/CSS/buttonEffects.css" />
+    <link rel="icon" href="/imgs/logo5.svg" type="image/x-icon" />
+    <style>
+      body {
+        display: none;
+        animation: fadein 2s;
+      }
+
+      @keyframes fadein {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document.body.style.display = "block";
+        document.body.classList.add("fade-in");
+      });
+    </script>
+
     <title>George de Vries</title>
   </head>
   <body>
@@ -13,11 +37,17 @@
     <nav class="navbar">
       <div class="nav-btns">
         <p>Click me →</p>
-        <img id="sm" src="/icons/icon_mobile.svg">
-        <img id="med" src="/icons/icon_laptop.svg">
-        <img id="lg" src="/icons/icon_desktop.svg">
+        <button id="bub">
+          <img src="/icons/icon_bubbles.svg" alt="bubbles" />
+        </button>
+        <button id="con">
+          <img src="/icons/icon_confetti.svg" alt="confetti" />
+        </button>
+        <button id="roc">
+          <img src="/icons/icon_rocket.svg" alt="rocket" />
+        </button>
       </div>
-      <h2>George de Vries</h2>
+      <h2 onclick="location.href='/index.html'">George de Vries</h2>
       <div class="nav-links">
         <a>About</a>
         <a>Tools & Skills</a>
@@ -43,21 +73,23 @@
             <hr />
           </h3>
           <p>
-            is simply dummy text of the printing and typesetting industry. Lorem
-            Ipsum has been the industry's standard dummy text ever since the
-            1500s, when an unknown printer took a galley of type and scrambled
-            it to make a type specimen book.
+            Thoroughly invested in life-long learning, I am a qualified web
+            devloper who carries a keen eye for design. My passion is front-end
+            development and I focus on creating eye-catching, responsive, and
+            accessible website layouts in a user first approach.
           </p>
           <br />
           <p id="about-text1"></p>
           <br />
-          <button class="about-btn">Say Hi 😄</button>
+          <button class="about-btn" onclick="location.href='#contact'">
+            Say Hi 😄
+          </button>
         </div>
       </section>
 
       <!-- Tools and Skills -->
-      <section>
-        <h3 style="margin-left: 3.9rem">
+      <section id="skills">
+        <h3>
           Tools & Skills
           <hr class="skills-line" />
         </h3>
@@ -86,16 +118,16 @@
             <img src="/icons/icon_css.svg" alt="css icon" />
             <h4>CSS</h4>
           </div>
-          <div>
-            <img src="/icons/icon_sass.svg" alt="sass icon" />
-            <h4>SASS</h4>
-          </div>
         </div>
 
         <div class="icons">
           <div>
             <img src="/icons/icon_figma.svg" alt="figma icon" />
             <h4>Figma</h4>
+          </div>
+          <div>
+            <img src="/icons/icon_sass.svg" alt="sass icon" />
+            <h4>SASS</h4>
           </div>
           <div>
             <img src="/icons/icon_bootstrap.svg" alt="bootstrap icon" />
@@ -120,9 +152,11 @@
         </div>
       </section>
 
+      <div id="firework"></div>
+
       <!-- UFO image -->
       <div>
-        <img class="ufo" src="/imgs/ufo.svg" />
+        <img class="ufo" src="/imgs/ufo.svg" alt="ufo" />
       </div>
 
       <!-- Projects -->
@@ -132,8 +166,8 @@
           <hr class="project-line" />
         </h3>
         <div class="project-main">
-          <img class="project-img" src="/imgs/stars.jpg" alt="" />
-          <img class="project-img" src="/imgs/stars.jpg" alt="" />
+          <img class="project-img" src="/imgs/cereal3.png" />
+          <img class="project-img" src="/imgs/cereal2.png" />
           <div>
             <h4 class="project-sub-head">Cereal Store</h4>
             <span class="sm-icon">
@@ -144,10 +178,10 @@
               <img src="/icons/icon_api.svg" />
             </span>
             <p>
-              is simply dummy text of the printing and typesetting industry.
-              Lorem Ipsum has been the industry's standard dummy text ever since
-              the 1500s, when an unknown printer took a galley of type and
-              scrambled it to make a type specimen book.
+              A fictional store that sells all sorts of cereals, it was made
+              with React, Typescript and Bootstrap. It features a shopping cart
+              system, various SCSS animations and uses the Edamam API to display
+              nutritional information about the products.
             </p>
             <button class="project-btn">View Code</button>
             <button class="project-btn">Live Demo</button>
@@ -155,7 +189,7 @@
         </div>
 
         <div class="project-main">
-          <div>
+          <div class="m-t">
             <h4 class="project-sub-head">My Portfolio</h4>
             <span class="sm-icon">
               <img src="/icons/icon_javascript.svg" />
@@ -164,16 +198,16 @@
               <img src="/icons/icon_threejs.svg" />
             </span>
             <p>
-              is simply dummy text of the printing and typesetting industry.
-              Lorem Ipsum has been the industry's standard dummy text ever since
-              the 1500s, when an unknown printer took a galley of type and
-              scrambled it to make a type specimen book.
+              My portfolio website was made with HTML, CSS, Three.js and
+              Javascript. No framework was used to show my understanding of
+              sematic html and vanilla CSS/Javascript. It features a cool (i
+              think so anyway!) space theme, and was a lot of fun to build.
             </p>
             <button class="project-btn">View Code</button>
-            <button class="project-btn">Live Demo</button>
+            <button class="project-btn"><a href="#bg3">Live Demo</a></button>
           </div>
-          <img class="project-img" src="/imgs/stars.jpg" alt="" />
-          <img class="project-img" src="/imgs/stars.jpg" alt="" />
+          <img class="project-img" src="/imgs/portfolio1.png" />
+          <img class="project-img" src="/imgs/stars.jpg" />
         </div>
       </section>
     </main>
@@ -182,19 +216,19 @@
     <footer class="footer">
       <div class="gradient1"><!-- Gradient --></div>
       <canvas id="bg2"></canvas>
-      <section class="contact-box">
+      <section class="contact-box" id="contact">
         <div>
           <img src="/icons/icon_email.svg" />
-          <h4><a>Email: georgedevries123@gmail.com</a></h4>
+          <h4><a>georgedevries123@gmail.com</a></h4>
         </div>
         <div>
           <img src="/icons/icon_github_2.svg" />
-          <h4><a>Github: https://github.com/GeorgeDV123</a></h4>
+          <h4><a>https://github.com/GeorgeDV123</a></h4>
         </div>
         <div>
           <img src="/icons/icon_linkedin.svg" />
           <h4>
-            <a>Linkedin: www.linkedin.com/in/george-de-vries-4407a117b</a>
+            <a>www.linkedin.com/in/george-de-vries-4407a117b</a>
           </h4>
         </div>
         <div>
@@ -202,7 +236,7 @@
           <h4><a>Download CV</a></h4>
         </div>
         <h6>George de Vries 2023 | all rights reserved</h6>
-        <img class="working" src="/imgs/working-9.svg" />
+        <img class="working" src="/imgs/working-9.svg" alt="person working" />
       </section>
     </footer>
 
