@@ -85,10 +85,10 @@ function init() {
       blendFunction: POSTPROCESSING.BlendFunction.COLOR_DODGE,
       kernelSize: POSTPROCESSING.KernelSize.SMALL,
       useLuminanceFilter: true,
-      luminanceThreshold: 0.3,
+      luminanceThreshold: 0.9,
       luminanceSmoothing: 0.75,
     });
-    bloomEffect.blendMode.opacity.value = 1.5;
+    bloomEffect.blendMode.opacity.value = 3;
 
     let effectPass = new POSTPROCESSING.EffectPass(
       camera,
@@ -115,9 +115,10 @@ function onWindowResize() {
 // Render clouds
 function render() {
   cloudParticles.forEach((p) => {
-    p.rotation.z -= 0.001;
+    p.rotation.z -= 0.002;
   });
-  composer.render(0.1);
+  composer.render(0.3);
   requestAnimationFrame(render);
 }
+
 init();

@@ -21,6 +21,7 @@ body {
   overflow-x: hidden;
   transition: all 1s ease;
   scroll-behavior: smooth;
+  letter-spacing: 0.07rem;
 }
 
 h3 {
@@ -46,21 +47,22 @@ a {
   transform: translate(-50%, -50%);
   text-align: center;
   width: 70%;
-  color: black;
+  color: white;
 }
 
 #nebula-box h1 {
   font-size: 5rem;
   color: black;
   font-style: italic;
-  text-shadow: 0 0 0.5rem var(--color4);
+  text-shadow: 0 0 0.5rem var(--color4), 0 0 0.5rem var(--color4),
+    0 0 0.5rem var(--color4), 0 0 0.5rem var(--color4);
 }
 
 #nebula-box button {
   font-family: inherit;
   border: 0.3rem solid black;
-  box-shadow: 0 0 0.5rem var(--color4);
-  width: 60%;
+  box-shadow: 0 0 0.5rem var(--color4), 0 0 0.5rem var(--color4);
+  text-shadow: 0 0 0.5rem white, 0 0 0.5rem white, 0 0 0.5rem white;
   border-radius: 1rem;
   padding: 1rem;
   font-size: 2rem;
@@ -68,7 +70,7 @@ a {
 }
 
 #nebula-box button:hover {
-  box-shadow: 0 0 0.5rem #ffffff;
+  box-shadow: 0 0 1rem #ffffff;
   cursor: pointer;
 }
 
@@ -90,6 +92,7 @@ header {
 
 #bg3 {
   display: block;
+  height: 50%;
 }
 
 header h1 {
@@ -118,6 +121,11 @@ header h1 {
   font-size: 80%;
 }
 
+.navbar h2:hover {
+  cursor: pointer;
+  text-shadow: 0 0 1rem var(--color4);
+}
+
 .nav-btns,
 .nav-links {
   display: flex;
@@ -127,6 +135,16 @@ header h1 {
 .nav-btns {
   align-items: center;
 }
+
+.nav-btns {
+  align-items: center;
+}
+
+.nav-btns button {
+  background-color: rgba(27, 27, 27, 0.1);
+  border: none;
+}
+
 
 .nav-btns img {
   padding: 0.5rem;
@@ -201,6 +219,10 @@ header h1 {
 .skills-line {
   width: 50%;
   margin-left: 0;
+}
+
+#skills h3 {
+  margin-left: 3.9rem;
 }
 
 .icons {
@@ -334,7 +356,7 @@ header h1 {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 50vw;
-  height: 50vh;
+  height: 40%;
   text-align: center;
   padding: 1rem;
   background-color: rgba(27, 27, 27, 0.8);
