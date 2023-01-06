@@ -34,6 +34,7 @@ h3 {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 /* Nebula Page */
@@ -177,7 +178,7 @@ header h1 {
 }
 
 .about-box {
-  height: 70vh;
+  height: 70%;
   margin: auto;
   display: grid;
   grid-template-columns: 50% 50%;
@@ -355,8 +356,8 @@ header h1 {
   top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 50vw;
-  height: 40%;
+  width: 50%;
+  height: fit-content;
   text-align: center;
   padding: 1rem;
   background-color: rgba(27, 27, 27, 0.8);

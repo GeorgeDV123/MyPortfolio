@@ -5,6 +5,15 @@
     text-align: center;
   }
 
+  /* Nebula */
+  #nebula-box h1 {
+    font-size: 3.5rem;
+  }
+
+  #nebula-box button {
+    font-size: 1.5rem;
+  }
+
   /* Navbar + Header */
   .navbar {
     display: flex;
@@ -15,7 +24,7 @@
 
   .nav-links {
     position: fixed;
-    top: 8%;
+    top: 60px;
     display: flex;
     gap: 1rem;
   }
@@ -33,7 +42,6 @@
   .about-box {
     display: grid;
     grid-template-columns: auto;
-    margin-bottom: 100%;
   }
 
   .about-box img {
@@ -61,7 +69,7 @@
     display: grid;
     grid-template-columns: repeat(3, 30%);
     gap: 1.5rem;
-    justify-content: center ;
+    justify-content: center;
     margin: 0;
   }
 
@@ -75,22 +83,68 @@
     height: 23rem;
   }
 
+  .hide {
+    display: none;
+  }
+
   .m-t {
-    margin-top: 40%;
+    margin-top: 20%;
   }
 
   /* Footer */
   footer {
-    font-size: 100%;
+    font-size: 90%;
   }
 
   .contact-box {
     width: 90vw;
-    height: 55%;
   }
 
   .contact-box div {
     text-align: start;
   }
+}
 
+@media (min-width: 768px) and (max-width: 1000px) {
+  /* Navbar + Header */
+
+  .nav-links {
+    gap: 0.7rem;
+    font-size: 85%;
+  }
+
+  /* About Section */
+
+  #about-text1 {
+    font-size: 1.3rem;
+  }
+
+  .about-btn {
+    font-size: 1.3rem;
+    width: 50%;
+  }
+
+  /* Featured Work Section */
+  .project-main {
+    gap: 1.5rem;
+  }
+
+  
+  .project-img {
+    width: 100%;
+  }
+
+  .m-t {
+    margin-top: 20%;
+  }
+
+  /* Footer */
+
+  .contact-box {
+    width: 90vw;
+  }
+
+  .contact-box div {
+    text-align: start;
+  }
 }

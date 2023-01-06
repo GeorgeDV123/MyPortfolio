@@ -19,7 +19,7 @@ function init() {
   camera.rotation.z = 0.27;
 
   //init lights
-  let ambient = new THREE.AmbientLight("#555555");
+  let ambient = new THREE.AmbientLight("#403f3f");
   scene.add(ambient);
 
   let directionalLight = new THREE.DirectionalLight("#F56EB3");
@@ -85,10 +85,10 @@ function init() {
       blendFunction: POSTPROCESSING.BlendFunction.COLOR_DODGE,
       kernelSize: POSTPROCESSING.KernelSize.SMALL,
       useLuminanceFilter: true,
-      luminanceThreshold: 0.9,
-      luminanceSmoothing: 0.75,
+      luminanceThreshold: 0.7,
+      luminanceSmoothing: 0.65,
     });
-    bloomEffect.blendMode.opacity.value = 3;
+    bloomEffect.blendMode.opacity.value = 2.5;
 
     let effectPass = new POSTPROCESSING.EffectPass(
       camera,
