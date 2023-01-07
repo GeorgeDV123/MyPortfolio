@@ -207,6 +207,7 @@ header h1 {
   color: var(--color2);
   font-size: 1.5rem;
   transition: all 0.5s ease;
+  border: var(--color2) solid;
 }
 
 .about-btn:hover {
@@ -335,6 +336,7 @@ header h1 {
   color: var(--color2);
   font-size: 1.3rem;
   transition: all 0.5s ease;
+  border: var(--color2) solid;
 }
 
 .project-btn:hover {

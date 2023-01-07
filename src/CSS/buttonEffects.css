@@ -43,7 +43,7 @@
   background: url('/public/imgs/rocket-1.svg');
   background-size: cover;
   top: 100%;
-  animation: rocket linear 1s;
+  animation: rocket linear 2s;
 }
 
 @keyframes rocket {
