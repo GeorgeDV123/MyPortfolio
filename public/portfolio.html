@@ -29,7 +29,6 @@
         document.body.classList.add("fade-in");
       });
     </script>
-
     <title>George de Vries</title>
   </head>
   <body>
@@ -74,7 +73,7 @@
           </h3>
           <p>
             Thoroughly invested in life-long learning, I am a qualified web
-            devloper who carries a keen eye for design. My passion is front-end
+            developer who carries a keen eye for design. My passion is front-end
             development and I focus on creating eye-catching, responsive, and
             accessible website layouts in a user first approach.
           </p>
@@ -126,6 +125,10 @@
             <h4>Figma</h4>
           </div>
           <div>
+            <img src="/icons/icon_firebase.svg" alt="firebase icon" />
+            <h4>Firebase</h4>
+          </div>
+          <div>
             <img src="/icons/icon_sass.svg" alt="sass icon" />
             <h4>SASS</h4>
           </div>
@@ -136,10 +139,6 @@
           <div>
             <img src="/icons/icon_vite.svg" alt="vite icon" />
             <h4>Vite</h4>
-          </div>
-          <div>
-            <img src="/icons/icon_github.svg" alt="github icon" />
-            <h4>Github</h4>
           </div>
           <div>
             <img src="/icons/icon_git.svg" alt="git icon" />
@@ -165,7 +164,7 @@
           Featured Projects
           <hr class="project-line" />
         </h3>
-        <div class="project-main">
+        <section class="project-main">
           <img class="project-img" src="/imgs/cereal3.png" />
           <img class="project-img hide" src="/imgs/cereal2.png" />
           <div>
@@ -183,13 +182,13 @@
               system, various SCSS animations and uses the Edamam API to display
               nutritional information about the products.
             </p>
-            <button class="project-btn">View Code</button>
-            <button class="project-btn">Live Demo</button>
+            <button class="project-btn"><a href="https://github.com/GeorgeDV123/CerealStore" target="_blank">View Code</a></button>
+            <button class="project-btn"><a href="https://cereal-store.vercel.app/" target="_blank">Live Demo</a></button>
           </div>
-        </div>
+        </section>
 
-        <div class="project-main">
-          <div class="m-t">
+        <section class="project-main">
+          <div>
             <h4 class="project-sub-head">My Portfolio</h4>
             <span class="sm-icon">
               <img src="/icons/icon_javascript.svg" />
@@ -199,16 +198,42 @@
             </span>
             <p>
               My portfolio website was made with HTML, CSS, Three.js and
-              Javascript. No framework was used to show my understanding of
-              sematic html and vanilla CSS/Javascript. It features a cool (i
-              think so anyway!) space theme, and was a lot of fun to build.
+              Javascript. It features a space theme created mainly with svg's
+              and webGL animations, and was a lot of fun to build.
             </p>
-            <button class="project-btn">View Code</button>
+            <button class="project-btn"><a href="" target="_blank">View Code</a></button>
             <button class="project-btn"><a href="#bg3">Live Demo</a></button>
           </div>
-          <img class="project-img" src="/imgs/portfolio1.png" />
-          <img class="project-img hide" src="/imgs/portfolio2.png" style="border: 5px solid black;" />
-        </div>
+          <img class="project-img rev" src="/imgs/portfolio1.png" />
+          <img
+            class="project-img hide"
+            src="/imgs/portfolio2.png"
+            style="border: 5px solid black"
+          />
+        </section>
+
+        <section class="project-main">
+          <img class="project-img" src="/imgs/cheesechat1.png" />
+          <img class="project-img hide" src="/imgs/cheesechat2.png" />
+          <div>
+            <h4 class="project-sub-head">Cheese Chat</h4>
+            <span class="sm-icon">
+              <img src="/icons/icon_react.svg" />
+              <img src="/icons/icon_javascript.svg" />
+              <img src="/icons/icon_css.svg" />
+              <img src="/icons/icon_firebase.svg" />
+            </span>
+            <p>
+              A simple chat app centered around cheese with a cool-looking curvy
+              landing page. Created with react and hosted on firebase, users can
+              choose to log in anonymously or authenticate with their google
+              account. Guidlines are also enforecd- saying anything negative
+              about cheese will result in a ban.
+            </p>
+            <button class="project-btn"><a href="https://github.com/GeorgeDV123/chat-app" target="_blank">View Code</a></button>
+            <button class="project-btn"><a href="https://chat-app-chi-navy.vercel.app/" target="_blank">Live Demo</a></button>
+          </div>
+        </section>
       </section>
     </main>
 
@@ -218,24 +243,34 @@
       <canvas id="bg2"></canvas>
       <section class="contact-box" id="contact">
         <div>
-          <img src="/icons/icon_email.svg" />
-          <h4><a>georgedevries123@gmail.com</a></h4>
+          <img src="/icons/icon_email.svg" alt="email image" />
+          <h4>
+            <a href="mailto:georgedevries123@gmail.com"
+              >georgedevries123@gmail.com</a
+            >
+          </h4>
         </div>
         <div>
           <img src="/icons/icon_github_2.svg" />
-          <h4><a>https://github.com/GeorgeDV123</a></h4>
+          <h4>
+            <a href="https://github.com/GeorgeDV123" target="_blank">Github</a>
+          </h4>
         </div>
         <div>
           <img src="/icons/icon_linkedin.svg" />
           <h4>
-            <a>www.linkedin.com/in/george-de-vries-4407a117b</a>
+            <a
+              href="https://www.linkedin.com/in/george-de-vries-4407a117b/"
+              target="_blank"
+              >Linkedin</a
+            >
           </h4>
         </div>
         <div>
           <img src="/icons/icon_cv.svg" />
           <h4><a>Download CV</a></h4>
         </div>
-        <h6 >George de Vries 2023 | all rights reserved</h6>
+        <h6>George de Vries 2023 | all rights reserved</h6>
         <img class="working" src="/imgs/working-9.svg" alt="person working" />
       </section>
     </footer>

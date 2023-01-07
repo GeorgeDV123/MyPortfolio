@@ -1,6 +1,11 @@
+import * as THREE from "three";
+import * as POSTPROCESSING from "postprocessing";
+
 let scene,
   camera,
   renderer,
+  cloudGeo,
+  cloudMaterial,
   cloudParticles = [],
   composer;
 
@@ -19,7 +24,7 @@ function init() {
   camera.rotation.z = 0.27;
 
   //init lights
-  let ambient = new THREE.AmbientLight("#403f3f");
+  let ambient = new THREE.AmbientLight("#403f3f", 0.1);
   scene.add(ambient);
 
   let directionalLight = new THREE.DirectionalLight("#F56EB3");
@@ -29,8 +34,8 @@ function init() {
   let pinkLight = new THREE.PointLight("#ab1ccb", 50, 450, 3);
   pinkLight.position.set(200, 300, 100);
   scene.add(pinkLight);
-  let cyanLight = new THREE.PointLight("#4b96b1", 50, 400, 2);
-  cyanLight.position.set(100, 300, 100);
+  let cyanLight = new THREE.PointLight("#4b96b1", 50, 400, 0.5);
+  cyanLight.position.set(-100, 200, 300);
   scene.add(cyanLight);
   let purpleLight = new THREE.PointLight("#460C68", 50, 550, 1.5);
   purpleLight.position.set(300, 300, 200);
@@ -41,7 +46,7 @@ function init() {
     canvas: document.querySelector("#bg"),
   });
   renderer.setSize(window.innerWidth, window.innerHeight);
-  scene.fog = new THREE.FogExp2("black", 0.001);
+  scene.fog = new THREE.FogExp2("#460C68", 0.0001);
   renderer.setClearColor(scene.fog.color);
 
   // cloud particles
@@ -78,17 +83,17 @@ function init() {
       blendFunction: POSTPROCESSING.BlendFunction.COLOR_DODGE,
       texture: texture,
     });
-    textureEffect.blendMode.opacity.value = 0.5;
+    textureEffect.blendMode.opacity.value = 0.75;
 
     // Bloom / post-processing
     const bloomEffect = new POSTPROCESSING.BloomEffect({
       blendFunction: POSTPROCESSING.BlendFunction.COLOR_DODGE,
       kernelSize: POSTPROCESSING.KernelSize.SMALL,
-      useLuminanceFilter: true,
-      luminanceThreshold: 0.7,
-      luminanceSmoothing: 0.65,
+      useLuminanceFilter: false,
+      luminanceThreshold: 2,
+      luminanceSmoothing: 3.5,
     });
-    bloomEffect.blendMode.opacity.value = 2.5;
+    bloomEffect.blendMode.opacity.value = 3;
 
     let effectPass = new POSTPROCESSING.EffectPass(
       camera,
@@ -101,6 +106,7 @@ function init() {
     composer.addPass(new POSTPROCESSING.RenderPass(scene, camera));
     composer.addPass(effectPass);
 
+    window.addEventListener("mousemove", onMouseMove, false);
     window.addEventListener("resize", onWindowResize, false);
     render();
   });
@@ -112,10 +118,22 @@ function onWindowResize() {
   camera.updateProjectionMatrix();
   renderer.setSize(window.innerWidth, window.innerHeight);
 }
+
+let mouseX = 0;
+let mouseY = 0;
+function onMouseMove(event) {
+  let deltaX = event.clientX - mouseX;
+  let deltaY = event.clientY - mouseY;
+  camera.position.x += deltaX * 0.02;
+  camera.position.y -= deltaY * 0.02;
+  mouseX = event.clientX;
+  mouseY = event.clientY;
+}
+
 // Render clouds
 function render() {
   cloudParticles.forEach((p) => {
-    p.rotation.z -= 0.002;
+    p.rotation.z -= 0.003;
   });
   composer.render(0.3);
   requestAnimationFrame(render);

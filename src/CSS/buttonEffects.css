@@ -40,7 +40,7 @@
   position: fixed;
   width: 5rem;
   height: 5rem;
-  background: url('/public/imgs/rocket-1.svg');
+  background: url('/imgs/rocket-1.svg');
   background-size: cover;
   top: 100%;
   animation: rocket linear 2s;
