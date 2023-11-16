@@ -25,7 +25,7 @@ export function Warp() {
     canvas: document.querySelector("#bg3"),
   });
   renderer.setPixelRatio(window.devicePixelRatio);
-  renderer.setSize(window.innerWidth, 0.5 * window.innerHeight);
+  renderer.setSize(window.innerWidth, 0.70 * window.innerHeight);
 
   function addSphere() {
     // create sphere 500 times
@@ -53,7 +53,7 @@ export function Warp() {
       let star = stars[i];
 
       // move stars quickly towards the camera
-      star.position.z += 2.2;
+      star.position.z += 0.8;
 
       // reposition the star once it has moved enough
       if (star.position.z > 300) star.position.z -= 600;
@@ -79,7 +79,7 @@ export function Warp() {
   function onWindowResize() {
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, 0.5 * window.innerHeight);
+    renderer.setSize(window.innerWidth, 0.70 * window.innerHeight);
   }
   window.addEventListener("resize", onWindowResize, false);
 

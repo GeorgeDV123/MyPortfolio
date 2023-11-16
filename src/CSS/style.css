@@ -37,49 +37,6 @@ a {
   color: inherit;
 }
 
-/* Nebula Page */
-
-#nebula-box {
-  font-family: "Orbitron", sans-serif;
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  width: 70%;
-  color: white;
-}
-
-#nebula-box h1 {
-  font-size: 5rem;
-  color: black;
-  font-style: italic;
-  text-shadow: 0 0 0.5rem var(--color4), 0 0 0.5rem var(--color4),
-    0 0 0.5rem var(--color4), 0 0 0.5rem var(--color4);
-}
-
-#nebula-box button {
-  font-family: inherit;
-  border: 0.3rem solid black;
-  box-shadow: 0 0 0.5rem var(--color4), 0 0 0.5rem var(--color4);
-  text-shadow: 0 0 0.5rem white, 0 0 0.5rem white, 0 0 0.5rem white;
-  border-radius: 1rem;
-  padding: 1rem;
-  font-size: 2rem;
-  background: none;
-}
-
-#nebula-box button:hover {
-  box-shadow: 0 0 1rem #ffffff;
-  cursor: pointer;
-}
-
-#nebula-box button a {
-  text-decoration: none;
-  color: inherit;
-}
-
 /* Header + Navbar Section */
 header {
   position: relative;
@@ -93,7 +50,19 @@ header {
 
 #bg3 {
   display: block;
-  height: 50%;
+  height: 70%;
+}
+
+#spaceMan {
+  position: absolute;
+  width: 10rem;
+  animation: moveX 4s linear 0s infinite alternate, moveY 6.8s linear 0s infinite alternate;
+}
+@keyframes moveX {
+  from { left: 0; transform: rotate(-25deg); } to { left: 80%; transform: rotate(18deg) }
+}
+@keyframes moveY {
+  from { top: 0; transform: rotate(-25deg) } to { top: 40%; transform: rotate(18deg) }
 }
 
 header h1 {
@@ -107,12 +76,13 @@ header h1 {
   font-style: italic;
   text-shadow: 0 0 1rem var(--color4);
   text-align: center;
+  z-index: 1;
 }
 
 .navbar {
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 2;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 33%);
